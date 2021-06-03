@@ -70,6 +70,10 @@ from jiant.tasks.lib.senteval.subj_number import SentEvalSubjNumberTask
 from jiant.tasks.lib.senteval.top_constituents import SentEvalTopConstituentsTask
 from jiant.tasks.lib.senteval.tree_depth import SentEvalTreeDepthTask
 from jiant.tasks.lib.senteval.word_content import SentEvalWordContentTask
+
+# * hscode 
+from jiant.tasks.lib.senteval.hscode import SentevalHSCODETask
+
 from jiant.tasks.lib.sst import SstTask
 from jiant.tasks.lib.stsb import StsbTask
 from jiant.tasks.lib.superglue_axg import SuperglueWinogenderDiagnosticsTask
@@ -157,6 +161,14 @@ TASK_DICT = {
     "senteval_top_constituents": SentEvalTopConstituentsTask,
     "senteval_tree_depth": SentEvalTreeDepthTask,
     "senteval_word_content": SentEvalWordContentTask,
+
+    # * hscode 
+    "hs1": SentevalHSCODETask(hscode_order="1"),
+    "hs2": SentevalHSCODETask(hscode_order="2"),
+    "hs25": SentevalHSCODETask(hscode_order="25"),
+    "hs3": SentevalHSCODETask(hscode_order="3"),
+    "hs4": SentevalHSCODETask(hscode_order="4"),
+
     "snli": SnliTask,
     "socialiqa": SocialIQATask,
     "spr1": Spr1Task,

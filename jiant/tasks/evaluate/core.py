@@ -997,6 +997,8 @@ def get_evaluation_scheme_for_task(task) -> BaseEvaluationScheme:
             tasks_retrieval.MCScriptTask,
             tasks_retrieval.ArctTask,
             tasks_retrieval.PiqaTask,
+            # * hscode 
+            tasks_retrieval.SentevalHSCODETask
         ),
     ):
         return SimpleAccuracyEvaluationScheme()
